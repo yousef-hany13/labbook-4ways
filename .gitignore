@@ -221,3 +221,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Secrets
+.env
+
+# VM / Video (ملفات كبيرة)
+*.iso
+*.vdi
+*.vmdk
+*.mp4
+
+# Misc
+*.log
+node_modules/
+.vscode/
