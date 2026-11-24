@@ -1,0 +1,13 @@
+[Unit]
+Description=Lab Booking App
+After=network.target postgresql.service
+
+[Service]
+User=kali
+WorkingDirectory=/home/kali/project/app
+Environment=DB_PASSWORD=CHANGE_ME
+ExecStart=/home/kali/project/app/venv/bin/gunicorn -w 2 -b 127.0.0.1:5000 app:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
